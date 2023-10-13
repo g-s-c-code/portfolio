@@ -13,14 +13,14 @@ A few projects I have been working on:
 ... [Continue listing other projects]-->
 
 ## Tools & Technologies
-
 - **Languages:** C#, Visual Basic, HTML, CSS, JavaScript
-- **Frameworks:** .NET, React
-- **Tools:** Git, Blazor, Bootstrap
+- **Frameworks:** .NET, React, Blazor, Bootstrap
+- **Tools:** Git
+
 
 ## Contact
 - **Email:** [G-C-Code@proton.me](G-C-Code@proton.me)
 
 ---
 
-⭐️ From [G-C-Code](https://github.com/G-C-Code)
+By [G-C-Code](https://github.com/G-C-Code)
