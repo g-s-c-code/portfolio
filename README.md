@@ -1,5 +1,5 @@
 # GC
-Hello! I'm GC, an aspiring Fullstack Developer from Stockholm. I have a keen interest in technology, design, and science, and I enjoy the challenges and creativity that coding offers. When I take a break from the screen, I often find solace in a quiet walk in the woods or by riding my bike.
+Hi! I'm GC, an aspiring Fullstack Developer from Stockholm. I have a keen interest in technology, design, and science, and I enjoy the challenges and creativity that coding offers. When I take a break from the screen, I often find solace in a quiet walk in the woods or by riding my bike.
 
 ## Projects
 A few projects I have been working on:
