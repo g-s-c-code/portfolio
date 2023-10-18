@@ -22,16 +22,14 @@
             height: 100%;
         }
 
-        /* Make sure each card takes full height */
         .row .col .card {
             display: flex;
             flex-direction: column;
             height: 100%;
         }
 
-        /* If you want each card-body to have equal height */
         .row .col .card .card-body {
-            flex: 1; /* This will make it take the available space, pushing footer to the bottom */
+            flex: 1;
         }
 
         .col-3, .col-9 {
@@ -41,31 +39,39 @@
         .anchor-icon img {
             width: 2.2rem;
             height: 2.2rem;
+            filter: grayscale(30%);
+        }
+
+        .custom-border-1 {
+            border: 1px solid #504444;
+            border-radius: 7px;
+        }
+
+        .custom-border-1-top {
+            border-top: 1px solid #504444;
         }
         
-        .custom-border-1 {
+        .custom-border-2 {
             border: 2px solid #073763;
             border-radius: 6px;
         }
 
-        .custom-border-1-top {
-            border-top: 2px solid #073763;
-        }
-
         .custom-border-2-top {
-            border-top: 2px solid #504444;
+            border-top: 1px solid #073763;
         }
 
         .custom-border-2-right {
-            border-right: 2px solid #504444;
+            border-right: 3px solid #073763;
         }
 
-        /* Custom style for the modal backdrop */
+        .custom-border-2-bottom {
+            border-bottom: 2px solid #073763;
+        }
+
         .modal-backdrop {
             opacity: 0.5 !important;
         }
 
-        /* Custom style for the modal content */
         .custom-modal-content {
             background-color: transparent;
             border: none;
@@ -82,11 +88,27 @@
             * {
                 font-size: 10px;
             }
+
+            .col-2 {
+                display: none;
+            }
+
+            .navbar {
+                display: block;
+            }
         }
 
         @media (min-width: 768px) and (max-width: 992px) {
             * {
                 font-size: 12px;
+            }
+
+            .col-2 {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
             }
         }
 
@@ -94,24 +116,31 @@
             * {
                 font-size: 14px;
             }
-        }
 
+            .col-2 {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+            }
+        }
     </style>
 </head>
 
-<body>
-    <div class="container-fluid overflow-scroll m-0" >
+<body class="bg-dark">
+    <div class="container-fluid overflow-scroll m-0">
         <div class="row">
             <div class="col-2 bg-dark text-white custom-border-2-right d-flex flex-column">
                 <div class="row flex-grow-">
                     <div class="col text-center">
-                        <h1 class="fs-5 fw-bold m-3">GC's PORTFOLIO</h1>
-                        <img src="https://avatars.githubusercontent.com/u/79803546?v=4" class="w-100 custom-border-1" />
+                        <h1 class="fs-5 fw-bold m-3">GC</h1>
+                        <img src="https://avatars.githubusercontent.com/u/79803546?v=4" class="w-100 custom-border-2" />
                     </div>
                 </div>
                 <div class="row my-3">
                     <div class="col ms-2">
-                        <h3 class="fs-6 fw-bold mt-5">LANGUAGES & TOOLS:</h3>
+                        <h3 class="fs-6 fw-bold custom-border-2-bottom pb-2 mt-5">LANGUAGES & TOOLS:</h3>
                         <table class="table-sm table-dark table-borderless">
                             <tr>
                                 <td>
@@ -158,27 +187,29 @@
                                 </td>
                             </tr>
                         </table>
-                        <h3 class="fs-6 fw-bold mt-5">CERTIFICATES:</h3>
+                        <h3 class="fs-6 fw-bold custom-border-2-bottom pb-2 mt-5">CERTIFICATES:</h3>
                             <p class="bi-link m-0 mt-2"> <a href="https://www.freecodecamp.org/certification/G-C-Code/responsive-web-design" target="_blank" class="text-white text-decoration-none">Responsive Web Design</a></p>
                             <p class="bi-link m-0 mt-2"> <a href="https://www.freecodecamp.org/certification/G-C-Code/foundational-c-sharp-with-microsoft" target="_blank" class="text-white text-decoration-none">Foundational C# with MS</a></p>
                         
-                        <h3 class="fs-6 fw-bold mt-5">OTHER:</h3>
-                            <p class="bi-github m-0 mt-2"> - <a href="https://github.com/G-C-Code" target="_blank" class="text-white text-decoration-none">GitHub</a></p>
-                            <p class="bi-geo-fill m-0 mt-2"> - Stockholm</p>
-                            <p class="bi-envelope-at-fill m-0 mt-2"> - G-C-Code@proton.me</p>
+                        <h3 class="fs-6 fw-bold custom-border-2-bottom pb-2 mt-5">OTHER:</h3>
+                        <p class="m-0 mt-2">
+                            <i class="bi-github pe-1"></i>
+                            <a href="https://github.com/G-C-Code" target="_blank" class="text-white text-decoration-none">GitHub</a>
+                        </p>
+                        <p class="m-0 mt-2">
+                            <i class="bi-geo-fill pe-1"></i> Stockholm
+                        </p>
+                        <p class="m-0 mt-2">
+                            <i class="bi-envelope-at-fill pe-1"></i>
+                            <a href="mailto:g-c-code@proton.me" target="_blank" class="text-white text-decoration-none">g-c-code@proton.me</a>
+                        </p>
                     </div>
                 </div>
             </div>
-
-
             <div class="col-10 bg-white d-flex flex-column px-5 pb-5">
-                <div class="flex-grow-1">
-                    <!--
-                        
-                        <h2 class="display-3 d-inline-flex p-2 pb-0 m-0" style="color: #073763">GC</h2>
-                    <h4 class="display-3 d-inline-flex p-2 pb-0 m-0" style="color: #073763">Fullstack .NET Developer</h4>
-
-                    -->
+                <div class="flex-grow-1 pt-5">
+                    <h2 class="display-6 text-uppercase m-0" style="color: #504444; font-weight: 900;">Fullstack</h2>
+                    <h2 class="display-3 pt-0 m-0" style="color: #073763; font-weight: 100;"> .NET Developer </h2>
                 </div>
                 <div class="row row-cols-1 row-cols-md-3 g-5 flex-grow-1 mt-3">
                     <!-- D-Analytics Card -->
@@ -200,7 +231,6 @@
                             </div>
                         </div>
                     </div>
-            
                     <!-- Car Rental Card -->
                     <div class="col">
                         <div class="card custom-border-1 font-monospace">
@@ -219,7 +249,6 @@
                             </div>
                         </div>
                     </div>
-            
                     <!-- Blackjack Card -->
                     <div class="col">
                         <div class="card custom-border-1 font-monospace">
@@ -239,6 +268,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row row-cols-1 row-cols-md-3 g-5 mt-2">
                     <!-- Placeholder Card -->
                     <div class="col">
@@ -250,7 +280,6 @@
                             <div class="card-body custom-border-2-top">
                                 <h5 class="card-title text-uppercase">Placeholder</h5>
                                 <p class="card-text">[Work In Progress]</p>
-                                <p class="card-text">Portfolio is under construction.</p>
                             </div>
                             <div class="card-footer bg-dark text-white custom-border-1-top">
                                 <a href="https://github.com/G-C-Code/D-Analytics" class="text-white text-decoration-none">
@@ -259,7 +288,6 @@
                             </div>
                         </div>
                     </div>
-            
                     <!-- Placeholder -->
                     <div class="col">
                         <div class="card custom-border-1 font-monospace">
@@ -270,7 +298,6 @@
                             <div class="card-body custom-border-2-top">
                                 <h5 class="card-title text-uppercase">Placeholder</h5>
                                 <p class="card-text">[Work In Progress]</p>
-                                <p class="card-text">Portfolio is under construction.</p>
                             </div>
                             <div class="card-footer bg-dark text-white custom-border-1-top">
                                 <a href="https://github.com/G-C-Code/car-rental" class="text-white text-decoration-none">
@@ -279,7 +306,6 @@
                             </div>
                         </div>
                     </div>
-            
                     <!-- Placeholder -->
                     <div class="col">
                         <div class="card custom-border-1 font-monospace">
@@ -290,7 +316,6 @@
                             <div class="card-body custom-border-2-top">
                                 <h5 class="card-title text-uppercase">Placeholder</h5>
                                 <p class="card-text">[Work In Progress]</p>
-                                <p class="card-text">Portfolio is under construction.</p>
                             </div>
                             <div class="card-footer bg-dark text-white custom-border-1-top">
                                 <a href="https://github.com/G-C-Code/blackjack" class="text-white text-decoration-none">
@@ -332,6 +357,7 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
