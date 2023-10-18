@@ -13,21 +13,56 @@
             font-family: Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        .custom-border-1 {
+            border: 3px solid #073763;
+            border-radius: 7px;
+        }
+
+        .custom-border-1-top {
+            border-top: 3px solid #073763;
+        }
+
+        .custom-border-2 {
+            border: 1px solid #504444;
+        }
+
+        .custom-border-2-top {
+            border-top: 1px solid #504444;
+        }
+
+        /* Custom style for the modal backdrop */
+        .modal-backdrop {
+            opacity: 0.5 !important;
+        }
+
+        /* Custom style for the modal content */
+        .custom-modal-content {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-modal-dialog {
+            max-width: 90%;
+        }
+
         @media (max-width: 767.99px) {
             * {
-                font-size: 10px;
+                font-size: 9px;
             }
         }
 
         @media (min-width: 768px) and (max-width: 992px) {
             * {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
 
         @media (min-width: 993px) {
             * {
-                font-size: 14px;
+                font-size: 13px;
             }
         }
 
@@ -37,11 +72,11 @@
 <body class="bg-dar">
     <div class="container-fluid m-0">
         <div class="row">
-            <div class="col-3 bg-dark text-white" style="height: 100%;">
+            <div class="col-3 bg-dark text-white" style="height: 100vh">
                 <div class="row">
                     <div class="col text-center text-uppercase">
                         <h1 class="fs-4 fw-bold m-3">GC's Portfolio</h1>
-                        <img src="https://avatars.githubusercontent.com/u/79803546?v=4" class="w-75" style="border-radius: 50%;" />
+                        <img src="https://avatars.githubusercontent.com/u/79803546?v=4" class="w-100 custom-border-1" style="border-radius: 50%;" />
                     </div>
                 </div>
                 <div class="row mt-3">
@@ -65,37 +100,161 @@
 
 
             </div>
-            <div class="col-9 bg-white p-5" style="height: 100%;">
+            <div class="col-9 bg-white p-5 d-flex flex-column justify-content-end" style="height: 100vh">
+                <h2 class="text-center p-2">My Projects</h2>
                 <div class="row row-cols-1 row-cols-md-3 g-5">
+                    <!-- D-Analytics Card -->
                     <div class="col">
-                      <div class="card">
-                        <img src="images\analytics.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">D-Analytics</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="card custom-border-1 font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal">
+                                <img src="images\analytics.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-2-top">
+                                <h5 class="card-title text-uppercase">D-Analytics</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                                <i class="bi-link"></i> 
+                                <a href="https://github.com/G-C-Code/D-Analytics" class="text-white text-decoration-none">
+                                    Project @ GitHub
+                                </a>
+                            </div>
                         </div>
-                      </div>
                     </div>
+            
+                    <!-- Car Rental Card -->
                     <div class="col">
-                      <div class="card">
-                        <img src="images/car-rental.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Car Rental</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="card custom-border-1 font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#carRentalModal">
+                                <img src="images/car-rental.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-2-top">
+                                <h5 class="card-title text-uppercase">Car Rental</h5>
+                                <p class="card-text">This project serves as a practical illustration of a three-layered architecture. Built in Blazor WebAssembly using HTML, CSS and C#.</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                                <i class="bi-link"></i> 
+                                <a href="https://github.com/G-C-Code/car-rental" class="text-white text-decoration-none">
+                                    Project @ GitHub
+                                </a>
+                            </div>
                         </div>
-                      </div>
                     </div>
+            
+                    <!-- Blackjack Card -->
                     <div class="col">
-                      <div class="card">
-                        <img src="images/blackjack.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Blackjack</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <div class="card custom-border-1 font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#blackjackModal">
+                                <img src="images/blackjack.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-2-top">
+                                <h5 class="card-title text-uppercase">Blackjack</h5>
+                                <p class="card-text">A classic Blackjack game built in Blazor WebAssembly using HTML, CSS and C#. The responsive UI provides a clean and intuitive experience.</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                                <i class="bi-link"></i> 
+                                <a href="https://github.com/G-C-Code/blackjack" class="text-white text-decoration-none">
+                                    Project @ GitHub
+                                </a>
+                            </div>
                         </div>
-                      </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-5 mt-2">
+                    <!-- D-Analytics Card -->
+                    <div class="col">
+                        <div class="card custom-border-1 font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal">
+                                <img src="images\analytics.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-2-top">
+                                <h5 class="card-title text-uppercase">D-Analytics</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                                <i class="bi-link"></i> 
+                                <a href="https://github.com/G-C-Code/D-Analytics" class="text-white text-decoration-none">
+                                    Project @ GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Car Rental Card -->
+                    <div class="col">
+                        <div class="card custom-border-1 font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#carRentalModal">
+                                <img src="images/car-rental.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-2-top">
+                                <h5 class="card-title text-uppercase">Car Rental</h5>
+                                <p class="card-text">This project serves as a practical illustration of a three-layered architecture. Built in Blazor WebAssembly using HTML, CSS and C#.</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                                <i class="bi-link"></i> 
+                                <a href="https://github.com/G-C-Code/car-rental" class="text-white text-decoration-none">
+                                    Project @ GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Blackjack Card -->
+                    <div class="col">
+                        <div class="card custom-border-1 font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#blackjackModal">
+                                <img src="images/blackjack.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-2-top">
+                                <h5 class="card-title text-uppercase">Blackjack</h5>
+                                <p class="card-text">A classic Blackjack game built in Blazor WebAssembly using HTML, CSS and C#. The responsive UI provides a clean and intuitive experience.</p>
+                            </div>
+                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                                <i class="bi-link"></i> 
+                                <a href="https://github.com/G-C-Code/blackjack" class="text-white text-decoration-none">
+                                    Project @ GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Modals for each card -->
+            <!-- D-Analytics Modal -->
+            <div class="modal fade" id="analyticsModal" tabindex="-1" aria-labelledby="analyticsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                    <div class="modal-content custom-modal-content">
+                        <img src="images\analytics.png" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Rental Modal -->
+            <div class="modal fade" id="carRentalModal" tabindex="-1" aria-labelledby="carRentalModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                    <div class="modal-content custom-modal-content">
+                        <img src="images/car-rental.png" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blackjack Modal -->
+            <div class="modal fade" id="blackjackModal" tabindex="-1" aria-labelledby="blackjackModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                    <div class="modal-content custom-modal-content">
+                        <img src="images/blackjack.png" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 
