@@ -42,30 +42,8 @@
             filter: grayscale(30%);
         }
 
-        .custom-border-1 {
-            border: 1px solid #504444;
-            border-radius: 7px;
-        }
-
-        .custom-border-1-top {
-            border-top: 1px solid #504444;
-        }
-        
-        .custom-border-2 {
-            border: 2px solid #073763;
-            border-radius: 6px;
-        }
-
-        .custom-border-2-top {
-            border-top: 1px solid #073763;
-        }
-
-        .custom-border-2-right {
-            border-right: 3px solid #073763;
-        }
-
-        .custom-border-2-bottom {
-            border-bottom: 2px solid #073763;
+        .custom-border-top {
+            border-top: 5px solid #0b4984;
         }
 
         .modal-backdrop {
@@ -82,6 +60,10 @@
 
         .custom-modal-dialog {
             max-width: 90%;
+        }
+
+        .text-outline {
+            text-shadow: 0.5px 0.5px 0 #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
         }
 
         @media (max-width: 767.99px) {
@@ -131,17 +113,18 @@
 <body class="bg-dark">
     <div class="container-fluid overflow-scroll m-0">
         <div class="row flex-md-row">
-            <div class="col-md-2 order-md-1 bg-dark text-white custom-border-2-right d-flex flex-column">
+            <div class="col-md-2 order-md-1 bg-dark text-white d-flex flex-column">
                 <div class="row flex-grow-">
-                    <div class="col text-center">
-                        <h1 class="fs-5 fw-bold m-3">GC</h1>
-                        <img src="https://avatars.githubusercontent.com/u/79803546?v=4" class="w-100 custom-border-2" />
+                    <div class="col text-center m-2">
+                        <h1 class="fs-5 fw-bold m-3">GC's PORTFOLIO</h1>
+                        <img src="https://avatars.githubusercontent.com/u/79803546?v=4" class="w-100 border border-white mb-4" />
                     </div>
                 </div>
                 <div class="row my-3">
-                    <div class="col ms-2">
-                        <h3 class="fs-6 fw-bold custom-border-2-bottom pb-2 mt-5">LANGUAGES & TOOLS:</h3>
-                        <table class="table-sm table-dark table-borderless">
+                    <div class="col m-2">
+                        <i class="bi-dash-lg"></i>
+                        <h3 class="fs-6 fw-bold pb-2 mt-0">LANGUAGES & TOOLS:</h3>
+                        <table class="table-sm table-dark table-borderless mb-4">
                             <tr>
                                 <td>
                                     <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noreferrer" class="anchor-icon">
@@ -187,13 +170,13 @@
                                 </td>
                             </tr>
                         </table>
-                        <h3 class="fs-6 fw-bold custom-border-2-bottom pb-2 mt-5">CERTIFICATES:</h3>
+                        <i class="bi-dash-lg"></i>
+                        <h3 class="fs-6 fw-bold pb-2 mt-0 ">CERTIFICATES:</h3>
                             <p class="bi-link m-0 mt-2"> <a href="https://www.freecodecamp.org/certification/G-C-Code/responsive-web-design" target="_blank" class="text-white text-decoration-none">Responsive Web Design</a></p>
-                            <p class="bi-link m-0 mt-2"> <a href="https://www.freecodecamp.org/certification/G-C-Code/foundational-c-sharp-with-microsoft" target="_blank" class="text-white text-decoration-none">Foundational C# with MS</a></p>
-                        
-                        <h3 class="fs-6 fw-bold custom-border-2-bottom pb-2 mt-5">OTHER:</h3>
+                            <p class="bi-link m-0 mt-2 mb-4"> <a href="https://www.freecodecamp.org/certification/G-C-Code/foundational-c-sharp-with-microsoft" target="_blank" class="text-white text-decoration-none">Foundational C# with MS</a></p>
+                        <i class="bi-dash-lg"></i>
+                        <h3 class="fs-6 fw-bold pb-2 mt-0">OTHER:</h3>
                         <p class="m-0 mt-2">
-                            <i class="bi-github pe-1"></i>
                             <a href="https://github.com/G-C-Code" target="_blank" class="text-white text-decoration-none">GitHub</a>
                         </p>
                         <p class="m-0 mt-2">
@@ -208,41 +191,24 @@
             </div>
             <div class="col-md-10 order-md-2 bg-white d-flex flex-column px-5 pb-5">
                 <div class="flex-grow-1 pt-5">
-                    <h2 class="display-6 text-uppercase m-0" style="color: #504444; font-weight: 900;">Fullstack</h2>
-                    <h2 class="display-3 pt-0 m-0" style="color: #073763; font-weight: 100;"> .NET Developer </h2>
+                    <h2 class="display-6 text-uppercase m-0" style="color: #504444; font-weight: 900; line-height:10%;">Fullstack</h2>
+                    <h2 class="display-3 pt-0 m-0" style="color: #0b4984; font-weight: 900;"> .NET Developer </h2>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-5 flex-grow-1 mt-3">
-                    <!-- D-Analytics Card -->
-                    <div class="col">
-                        <div class="card custom-border-1 font-monospace">
-                            <!-- Image link to trigger modal -->
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal">
-                                <img src="images\analytics.png" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body custom-border-2-top">
-                                <h5 class="card-title text-uppercase">D-Analytics</h5>
-                                <p class="card-text">[Work In Progress]</p>
-                                <p class="card-text">Repository will remain private during construction.</p>
-                            </div>
-                            <div class="card-footer bg-dark text-white custom-border-1-top">
-                                <a href="https://github.com/G-C-Code/D-Analytics" class="text-white text-decoration-none">
-                                <i class="bi-link"> </i>d-analytics @ GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row row-cols-1 row-cols-md-3 g-5 flex-grow-1 mt-1">
                     <!-- Car Rental Card -->
                     <div class="col">
-                        <div class="card custom-border-1 font-monospace">
+                        <div class="card border-dark font-monospace">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#carRentalModal">
                                 <img src="images/car-rental.png" class="card-img-top" alt="...">
                             </a>
-                            <div class="card-body custom-border-2-top">
-                                <h5 class="card-title text-uppercase">Car Rental</h5>
-                                <p class="card-text">This project serves as a practical illustration of a three-layered architecture. Built in Blazor WebAssembly using HTML, CSS and C#.</p>
+                            <div class="card-body custom-border-top">
+                                <a href="https://github.com/G-C-Code/car-rental" class="text-dark text-decoration-none">
+                                    <h5 class="card-title text-uppercase">Car Rental</h5>
+                                    <p class="card-text">This project serves as a practical illustration of a three-layered architecture. Built in Blazor WebAssembly using HTML, CSS and C#.</p>
+                                </a>
                             </div>
-                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                            <div class="card-footer custom-border-top bg-dark text-white">
                                 <a href="https://github.com/G-C-Code/car-rental" class="text-white text-decoration-none">
                                     <i class="bi-link"> </i>car-rental @ GitHub
                                 </a>
@@ -251,92 +217,51 @@
                     </div>
                     <!-- Blackjack Card -->
                     <div class="col">
-                        <div class="card custom-border-1 font-monospace">
+                        <div class="card border-dark font-monospace">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#blackjackModal">
                                 <img src="images/blackjack.png" class="card-img-top" alt="...">
                             </a>
-                            <div class="card-body custom-border-2-top">
-                                <h5 class="card-title text-uppercase">Blackjack</h5>
-                                <p class="card-text">A classic Blackjack game built in Blazor WebAssembly using HTML, CSS and C#. The responsive UI provides a clean and intuitive experience.</p>
+                            <div class="card-body custom-border-top">
+                                <a href="https://github.com/G-C-Code/blackjack" class="text-dark text-decoration-none">
+                                    <h5 class="card-title text-uppercase">Blackjack</h5>
+                                    <p class="card-text">A classic Blackjack game built in Blazor WebAssembly using HTML, CSS and C#. The responsive UI provides a clean and intuitive experience.</p>
+                                </a>
                             </div>
-                            <div class="card-footer bg-dark text-white custom-border-1-top">
+                            <div class="card-footer custom-border-top bg-dark text-white">
                                 <a href="https://github.com/G-C-Code/blackjack" class="text-white text-decoration-none">
                                     <i class="bi-link"> </i>blackjack @ GitHub
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <!-- Single Files -->
+                    <div class="col">
+                        <div class="card border-dark font-monospace">
+                            <!-- Image link to trigger modal -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#singleFilesModal">
+                                <img src="images\analytics.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body custom-border-top">
+                                <a href="https://github.com/G-C-Code/single-files" class="text-dark text-decoration-none">
+                                    <h5 class="card-title text-uppercase">Single Files</h5>
+                                    <p class="card-text">Standalone single-file works combining HTML, CSS, JS and Bootstrap. Each file delivers a complete experience, emphasizing simplicity and functionality.</p>
+                                </a>
+                            </div>
+                            <div class="card-footer custom-border-top bg-dark text-white">
+                                <a href="https://github.com/G-C-Code/single-files" class="text-white text-decoration-none">
+                                <i class="bi-link"> </i>single-files @ GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                
+                <!--
                 <div class="row row-cols-1 row-cols-md-3 g-5 mt-2">
-                    <!-- Placeholder Card -->
-                    <div class="col">
-                        <div class="card custom-border-1 font-monospace">
-                            <!-- Image link to trigger modal -->
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#analyticsModal">
-                                <img src="images\placeholder.png" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body custom-border-2-top">
-                                <h5 class="card-title text-uppercase">Placeholder</h5>
-                                <p class="card-text">[Work In Progress]</p>
-                            </div>
-                            <div class="card-footer bg-dark text-white custom-border-1-top">
-                                <a href="https://github.com/G-C-Code/D-Analytics" class="text-white text-decoration-none">
-                                <i class="bi-link"> </i>placeholder @ GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Placeholder -->
-                    <div class="col">
-                        <div class="card custom-border-1 font-monospace">
-                            <!-- Image link to trigger modal -->
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#carRentalModal">
-                                <img src="images/placeholder.png" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body custom-border-2-top">
-                                <h5 class="card-title text-uppercase">Placeholder</h5>
-                                <p class="card-text">[Work In Progress]</p>
-                            </div>
-                            <div class="card-footer bg-dark text-white custom-border-1-top">
-                                <a href="https://github.com/G-C-Code/car-rental" class="text-white text-decoration-none">
-                                    <i class="bi-link"> </i>placeholder @ GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Placeholder -->
-                    <div class="col">
-                        <div class="card custom-border-1 font-monospace">
-                            <!-- Image link to trigger modal -->
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#blackjackModal">
-                                <img src="images/placeholder.png" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body custom-border-2-top">
-                                <h5 class="card-title text-uppercase">Placeholder</h5>
-                                <p class="card-text">[Work In Progress]</p>
-                            </div>
-                            <div class="card-footer bg-dark text-white custom-border-1-top">
-                                <a href="https://github.com/G-C-Code/blackjack" class="text-white text-decoration-none">
-                                    <i class="bi-link"> </i>placeholder @ GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
+               -->
             
                 <!-- Modals for each card -->
-                <!-- D-Analytics Modal -->
-                <div class="modal fade" id="analyticsModal" tabindex="-1" aria-labelledby="analyticsModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
-                        <div class="modal-content custom-modal-content">
-                            <img src="images\analytics.png" class="img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Car Rental Modal -->
                 <div class="modal fade" id="carRentalModal" tabindex="-1" aria-labelledby="carRentalModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
@@ -354,6 +279,16 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Single Files Modal -->
+                <div class="modal fade" id="singleFilesModal" tabindex="-1" aria-labelledby="singleFilesModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+                        <div class="modal-content custom-modal-content">
+                            <img src="images\analytics.png" class="img-fluid" alt="...">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
