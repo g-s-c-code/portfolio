@@ -61,7 +61,7 @@
         }
 
         .modal-backdrop {
-            opacity: 0.5 !important;
+            opacity: 0.9 !important;
         }
 
         .custom-modal-content {
@@ -213,28 +213,22 @@
                             <h2 class="display-1 pt-0 m-0" style="color: #233448; font-weight: 900;"> .NET Developer </h2>
                         </div>
                         <div class="col-1 d-flex justify-content-end">
-                            <!--
-                            <div class="card border-dark border-3 font-monospace">
-                                <div class="card-body">
-                                    <p class="card-text">Published solutions on Exercism: <span class="fw-bold">49</span> <i class="bi-stars text-warning"></i></p>
-                                </div>
-                                <div class="card-footer bg-dark text-white rounded-0">
-                                    <a href="https://exercism.org/profiles/G-C-Code" class="text-white text-decoration-none">
-                                        <i class="bi-link"> </i>g-c-code @ Exercism
-                                    </a>
-                                </div>
-                            </div>
-                            -->
+                           
                         </div>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-5 flex-grow-1 mt-1">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="font-monospace text-center p-2">Click on an image to preview the application.</h6>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-5 flex-grow-1 ">
                     <!-- Car Rental Card -->
                     <div class="col">
                         <div class="card custom-border font-monospace">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#carRentalModal" class="mx-4 mt-4">
-                                <img src="images/car-rental.png" class="card-img-top border rounded-top-3" alt="...">
+                                <img src="images/car-rental/thumbnail.png" class="card-img-top border rounded-top-3" alt="Thumbnail Image">
                             </a>
                             <div class="card-body custom-border-top bg-white">
                                 <a href="https://github.com/G-C-Code/car-rental" class="text-dark text-decoration-none">
@@ -249,12 +243,40 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="modal fade" id="carRentalModal" tabindex="-1" aria-labelledby="carRentalModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered custom-modal-dialog modal-lg">
+                            <div class="modal-content custom-modal-content">
+                                <div class="modal-body text-white text-center text-uppercase">
+                                    <!-- Stacked Image 1 with Header -->
+                                    <h3 class="mb-2">Home</h3>
+                                    <img src="images/car-rental/screenshot0.png" alt="Screenshot 0" class="img-fluid mb-3 border border-2 border-white">
+                    
+                                    <!-- Stacked Image 2 with Header -->
+                                    <h3 class="mb-2">Booking Engine</h3>
+                                    <img src="images/car-rental/screenshot1.png" alt="Screenshot 1" class="img-fluid mb-3 border border-2 border-white">
+                    
+                                    <!-- Stacked Image 3 with Header -->
+                                    <h3 class="mb-2">Fleet</h3>
+                                    <img src="images/car-rental/screenshot2.png" alt="Screenshot 2" class="img-fluid mb-3 border border-2 border-white">
+                    
+                                    <!-- Stacked Image 4 with Header -->
+                                    <h3 class="mb-2">Contact</h3>
+                                    <img src="images/car-rental/screenshot3.png" alt="Screenshot 3" class="img-fluid mb-3 border border-2 border-white">
+                                </div>
+                                <div class="modal-footer mb-3">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Blackjack Card -->
                     <div class="col">
                         <div class="card custom-border font-monospace">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#blackjackModal" class="mx-4 mt-4">
-                                <img src="images/blackjack.png" class="card-img-top border rounded-top-3" alt="...">
+                                <img src="images/blackjack/thumbnail.png" class="card-img-top border rounded-top-3" alt="Thumbnail Image">
                             </a>
                             <div class="card-body custom-border-top bg-white">
                                 <a href="https://github.com/G-C-Code/blackjack" class="text-dark text-decoration-none">
@@ -269,12 +291,36 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Single Files -->
+
+                    <div class="modal fade" id="blackjackModal" tabindex="-1" aria-labelledby="blackjackModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered custom-modal-dialog modal-lg">
+                            <div class="modal-content custom-modal-content">
+                                <div class="modal-body text-white text-center text-uppercase">
+                                    <!-- Stacked Image 1 with Header -->
+                                    <h3 class="mb-2">Home</h3>
+                                    <img src="images/blackjack/screenshot0.png" alt="Screenshot 0" class="img-fluid mb-3 border border-2 border-white">
+
+                                    <!-- Stacked Image 2 with Header -->
+                                    <h3 class="mb-2">Responsive</h3>
+                                    <img src="images/blackjack/screenshot1.png" alt="Screenshot 1" class="img-fluid mb-3 border border-2 border-white">
+
+                                    <!-- Stacked Image 3 with Header -->
+                                    <h3 class="mb-2">Instructions</h3>
+                                    <img src="images/blackjack/screenshot2.png" alt="Screenshot 2" class="img-fluid mb-3 border border-2 border-white">
+                                </div>
+                                <div class="modal-footer mb-3">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single-Files Card -->
                     <div class="col">
                         <div class="card custom-border font-monospace">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#singleFilesModal" class="mx-4 mt-4">
-                                <img src="images\single-file.png" class="card-img-top border rounded-top-3" alt="...">
+                                <img src="images/single-files/single-files.png" class="card-img-top border rounded-top-3" alt="Thumbnail Image for Single Files">
                             </a>
                             <div class="card-body custom-border-top bg-white">
                                 <a href="https://github.com/G-C-Code/single-files" class="text-dark text-decoration-none">
@@ -284,44 +330,34 @@
                             </div>
                             <div class="card-footer custom-bg text-white rounded-0">
                                 <a href="https://github.com/G-C-Code/single-files" class="text-white text-decoration-none">
-                                <i class="bi-link"> </i>single-files @ GitHub
+                                    <i class="bi-link"> </i>single-files @ GitHub
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!--
-                <div class="row row-cols-1 row-cols-md-3 g-5 mt-2">
-               -->
-            
-                <!-- Modals for each card -->
-                <!-- Car Rental Modal -->
-                <div class="modal fade" id="carRentalModal" tabindex="-1" aria-labelledby="carRentalModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
-                        <div class="modal-content custom-modal-content">
-                            <img src="images/car-rental.png" class="img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Blackjack Modal -->
-                <div class="modal fade" id="blackjackModal" tabindex="-1" aria-labelledby="blackjackModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
-                        <div class="modal-content custom-modal-content">
-                            <img src="images/blackjack.png" class="img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div>
+                    <div class="modal fade" id="singleFilesModal" tabindex="-1" aria-labelledby="singleFilesModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered custom-modal-dialog modal-lg">
+                            <div class="modal-content custom-modal-content">
+                                <div class="modal-body text-white text-center text-uppercase">
+                                    <!-- Stacked Image 1 with Header -->
+                                    <h3 class="mb-2">A library of great-to-have snippets (.NET Framework) with a copy button</h3>
+                                    <img src="images/single-files/codegems.png" alt="Screenshot 0" class="img-fluid mb-3 border border-2 border-white">
 
-                <!-- Single Files Modal -->
-                <div class="modal fade" id="singleFilesModal" tabindex="-1" aria-labelledby="singleFilesModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
-                        <div class="modal-content custom-modal-content">
-                            <img src="images\single-file.png" class="img-fluid" alt="...">
+                                    <!-- Stacked Image 2 with Header -->
+                                    <h3 class="mb-2">Virtual dice roller for the board game Risk: The Lord of the Rings Ed.</h3>
+                                    <img src="images/single-files/battlesimulator.png" alt="Screenshot 1" class="img-fluid mb-3 border border-2 border-white">
+
+                                    <!-- Stacked Image 3 with Header -->
+                                    <h3 class="mb-2">A sleek rendition of the timeless Tic-Tac-Toe game</h3>
+                                    <img src="images/single-files/tictactoe.png" alt="Screenshot 2" class="img-fluid mb-3 border border-2 border-white">
+                                </div>
+                                <div class="modal-footer mb-3">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
             </div>
         </div>
