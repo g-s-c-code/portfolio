@@ -18,17 +18,9 @@
             font-family: Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .row .col .container-fluid {
+        .row .col .container-fluid .card {
             display: flex;
             flex-direction: column;
-            height: 100%;
-            max-height: 100vh;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
 
         .row .col .card .card-body {
@@ -77,6 +69,14 @@
         .text-outline {
             text-shadow: 0.5px 0.5px 0 #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
         }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
 
         @media (max-width: 767.99px) {
             * {
@@ -128,7 +128,7 @@
             <div class="col-md-2 order-md-1 bg-dark text-white d-flex flex-column">
                 <div class="row flex-grow-">
                     <div class="col text-center m-2">
-                        <h1 class="fs-5 fw-bold">G. S. C.</h1>
+                        <h1 class="fs-5 fw-bold">GSC</h1>
                         <img src="images/gsc.png" class="w-100 border border-white my-2" style="border-radius: 50%;" />
                     </div>
                 </div>
@@ -136,62 +136,18 @@
                     <div class="col m-2">
                         <i class="bi-dash-lg"></i>
                         <h3 class="fs-6 fw-bold pb-2 mt-0">LANGUAGES & TOOLS</h3>
-                        <table class="table-sm table-dark table-borderless mb-4">
-                            <tr>
-                                <td>
-                                    <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="bootstrap"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://git-scm.com/" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git"/>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/800px-Blazor.png" alt="blazor"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/684px-Microsoft_.NET_logo.svg.png?20200524040737" alt="dotnet"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="sql server"/>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer" class="anchor-icon">
-                                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb"/>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/html/default.asp">HTML5</a></li>
+                            <li><a href="https://www.w3schools.com/css/">CSS3</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                            <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                            <li><a href="https://www.w3schools.com/cs/">C#</a></li>
+                            <li><a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor">Blazor</a></li>
+                            <li><a href="https://dotnet.microsoft.com/">.NET</a></li>
+                            <li><a href="https://git-scm.com/">Git</a></li>
+                            <li><a href="https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms">SQL Server</a></li>
+                            <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+                        </ul>
                         <i class="bi-dash-lg"></i>
                         <h3 class="fs-6 fw-bold pb-2 mt-0 ">CERTIFICATES</h3>
                             <p class="bi-link m-0 mt-2"> <a href="https://www.freecodecamp.org/certification/g-s-c-code/responsive-web-design" target="_blank" class="text-white text-decoration-none">Responsive Web Design</a></p>
