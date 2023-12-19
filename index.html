@@ -52,6 +52,17 @@
             text-decoration: none;
         }
 
+        .card-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+        }
+
+        .card-scroll-container .col {
+            flex: 0 0 auto; /* Prevent cards from stretching */
+            width: calc(50% - 0.5rem); /* Adjust width for two cards view */
+        }
+
         @media (max-width: 767.99px) {
             * {
                 font-size: 10px;
@@ -63,6 +74,10 @@
 
             .navbar {
                 display: block;
+            }
+
+            .card-scroll-container .col {
+                width: 100%; /* Full width for smaller screens */
             }
         }
 
@@ -136,10 +151,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 order-md-2 d-flex flex-column px-4 pb-4">
+            <div class="col-md-10 order-md-2 d-flex flex-column">
                 <div class="flex-grow-1 pt-5">
                     <div class="row">
-                        <div class="col-11">
+                        <div class="col-11 px-5">
                             <h2 class="display-4 text-uppercase m-0 pt-3" style="color: #554949; font-weight: 900; line-height: 25%;">Fullstack</h2>
                             <h2 class="display-1 pt-0 m-0" style="color: #233448; font-weight: 900;"> .NET Developer </h2>
                         </div>
@@ -150,10 +165,10 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h6 class="font-monospace text-center fst-italic p-2">Click on an image to preview the application.</h6>
+                        <h6 class="font-monospace text-center fst-italic p-2">Click on an image to preview the application. Scroll to see more.</h6>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="card-scroll-container p-5 pt-0">
                     <!-- Car Rental Card -->
                     <div class="col">
                         <div class="card custom-border font-monospace h-100">
