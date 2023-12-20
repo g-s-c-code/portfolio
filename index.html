@@ -381,7 +381,7 @@
     function scrollCardContainer(direction) {
         var container = document.querySelector('.card-scroll-container');
         var containerWidth = container.clientWidth;
-        var visibleCards = window.innerWidth >= 768 ? 2.01 : 1.02;
+        var visibleCards = window.innerWidth >= 768 ? 2.01 : 1.022;
         var scrollAmount = (containerWidth / visibleCards) * direction;
 
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
