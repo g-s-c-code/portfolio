@@ -63,6 +63,22 @@
             width: calc(50% - 2rem);
         }
 
+        .arrow-button {
+            color: #333;
+            background-color: #fff;
+            margin: 0px 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            border-bottom: 1px solid #fff;
+        }
+
+        .arrow-button:hover {
+            color: steelblue;
+            border-bottom: 1px solid steelblue;
+        }
+
         @media (max-width: 767.99px) {
             * {
                 font-size: 10px;
@@ -159,8 +175,8 @@
                 <div class="flex-grow-1 pt-5">
                     <div class="row">
                         <div class="col-11 px-5">
-                            <h2 class="display-4 text-uppercase m-0 pt-3" style="color: #554949; font-weight: 900; line-height: 25%;">Full-stack</h2>
-                            <h2 class="display-1 pt-0 m-0" style="color: #233448; font-weight: 900;"> .NET Developer </h2>
+                            <h2 class="display-5 text-uppercase mb-0 pt-3" style="color: #554949; font-weight: 900; line-height: 25%;">Full-stack</h2>
+                            <h2 class="display-1 pt-0 mt-0" style="color: #233448; font-weight: 900;"> .NET Developer </h2>
                         </div>
                         <div class="col-1 d-flex justify-content-end">
                            <!-- Build a link to Exercism (card) -->
@@ -168,13 +184,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <h6 class="font-monospace text-center fst-italic p-2">Click on an image to preview the application. Scroll to see more.</h6>
+                    <div class="col d-flex align-items-center ms-4 m-3">
+                        <!-- Navigation Arrows with Custom Styling -->
+                        <h6 class="font-monospace pt-2">Click on an image to preview the application. To view more projects, use arrows to scroll.</h6>
+                        <button id="scrollLeft" class="bi bi-arrow-left arrow-button"></button>
+                        <button id="scrollRight" class="bi bi-arrow-right arrow-button"></button>
                     </div>
                 </div>
+
                 <div class="card-scroll-container p-4 pt-0">
                     <!-- Car Rental Card -->
-                    <div class="col">
+                    <div class="col card-item">
                         <div class="card custom-border font-monospace h-100">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#carRentalModal" class="mx-2 mt-2">
@@ -227,7 +247,7 @@
                     </div>
                     
                     <!-- LibraryApi Card -->
-                    <div class="col">
+                    <div class="col card-item">
                         <div class="card custom-border font-monospace h-100">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#libraryApiModal" class="mx-2 mt-2">
@@ -259,7 +279,7 @@
                     </div>
 
                     <!-- Blackjack Card -->
-                    <div class="col">
+                    <div class="col card-item">
                         <div class="card custom-border font-monospace h-100">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#blackjackModal" class="mx-2 mt-2">
@@ -304,7 +324,7 @@
                     </div>
 
                     <!-- Single-Files Card -->
-                    <div class="col">
+                    <div class="col card-item">
                         <div class="card custom-border font-monospace h-100">
                             <!-- Image link to trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#singleFilesModal" class="mx-2 mt-2">
@@ -349,6 +369,28 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('scrollLeft').addEventListener('click', function() {
+            scrollCardContainer(-1);
+        });
+
+        document.getElementById('scrollRight').addEventListener('click', function() {
+            scrollCardContainer(1);
+        });
+
+        function scrollCardContainer(direction) {
+            // Find the first card
+            var card = document.querySelector('.card-item');
+            if (card) {
+                // Calculate width with margins
+                var style = window.getComputedStyle(card);
+                var cardWidth = card.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight);
+
+                // Scroll
+                document.querySelector('.card-scroll-container').scrollBy({ left: cardWidth * direction, behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 
 </html>
